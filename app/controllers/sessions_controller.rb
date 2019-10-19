@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   def user_destroy
     session.delete(:user_id)
-    current_user
+    current_user = nil
   end
 
 end
