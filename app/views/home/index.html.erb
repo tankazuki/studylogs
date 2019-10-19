@@ -1,1 +1,9 @@
-<h1>ゲスト</h1>
+<% if flash[:notice] %>
+  <h3 style="color: red;"><%= flash[:notice] %></h3>
+<% end %>
+<% if sign_in_user? %>
+  <h1><%= current_user.name %></h1>
+<% else %>
+  <h1>ゲスト</h1>
+<% end %>
+<%= link_to "新規登録", user_new_url %>
