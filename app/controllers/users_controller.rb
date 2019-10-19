@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def sign_out
+    sign_out_user
+  end
+
   private
 
   def user_params

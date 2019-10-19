@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
   end
 
   def user_destroy
+    session.delete(:user_id)
+    current_user
   end
 
 end

@@ -3,6 +3,7 @@
 <% end %>
 <% if sign_in_user? %>
   <h1><%= current_user.name %></h1>
+  <%= link_to "ログアウト", user_sign_out_url %>
 <% else %>
   <h1>ゲスト</h1>
 <% end %>
