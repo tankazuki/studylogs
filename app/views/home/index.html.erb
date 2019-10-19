@@ -6,5 +6,6 @@
   <%= link_to "ログアウト", user_sign_out_url %>
 <% else %>
   <h1>ゲスト</h1>
+  <%= link_to "新規登録", user_new_url %>
+  <%= link_to "ログイン", user_sign_in_url %>
 <% end %>
-<%= link_to "新規登録", user_new_url %>

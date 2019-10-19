@@ -1,0 +1,8 @@
+<h2>ログイン</h2>
+<%= form_for(:session, url:"sign_in") do |f| %>
+  <%= f.label :email, "email" %>
+  <%= f.email_field :email %>
+  <%= f.label :password, "password" %>
+  <%= f.password_field :password %>
+  <%= f.submit "送信" %>
+<% end %>
