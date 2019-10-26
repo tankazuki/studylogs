@@ -1,8 +1,11 @@
-<h2>ログイン</h2>
-<%= form_for(:session, url:"sign_in") do |f| %>
-  <%= f.label :email, "email" %>
-  <%= f.email_field :email %>
-  <%= f.label :password, "password" %>
-  <%= f.password_field :password %>
-  <%= f.submit "送信" %>
-<% end %>
+<div class="auth-layout">
+  <div class="auth-wrapper-layout">
+    <h2 class="auth-title">ログイン</h2>
+    <h3 class="normal-auth">通常のログイン</h3>
+    <%= form_for(:session, url:"sign_in", class: "auth-form") do |f| %>
+      <%= f.email_field :email, placeholder: "email" %></br>
+      <%= f.password_field :password, placeholder: "password" %></br>
+      <%= f.submit "ログイン", class: "form-submit" %>
+    <% end %>
+  </div>
+</div>

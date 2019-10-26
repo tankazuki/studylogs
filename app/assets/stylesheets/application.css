@@ -13,3 +13,94 @@
  *= require_tree .
  *= require_self
  */
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
+
+.auth-layout{
+  border: 1px gray solid;
+  border-radius: 5px;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+.auth-wrapper-layout{
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.auth-title{
+  margin: 0 auto;
+}
+.auth-form{
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.form-submit{
+  display: inline-block;
+  font-size: 18px;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+.form-submit:hover {
+  background: #67c5ff;
+  color: white;
+}
+/*これはformあたりの部分 */
+#user_name, #user_email, #user_password, #session_password, #session_email {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+ #user_name, #user_email, #user_password, #session_password, #session_email {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 60%;
+	margin: 20px 0;
+	padding: 0.3em;
+	transition: 0.3s;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+	outline: none;
+}
+#session_email:focus {
+	border-color: #da3c41;
+}
+ #session_password:focus {
+ 	border-color: #da3c41;
+ }
+ #user_name, #user_email, #user_password, #session_password, #session_email {
+	padding-left: 20px;
+}
+#session_email i {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	padding: 9px 8px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+ #session_password i {
+ 	position: absolute;
+ 	top: 8px;
+ 	left: 0;
+ 	padding: 9px 8px;
+ 	transition: 0.3s;
+ 	color: #aaaaaa;
+ }
+ #session_password i {
+ 	position: absolute;
+ 	top: 8px;
+ 	left: 0;
+ 	padding: 9px 8px;
+ 	transition: 0.3s;
+ 	color: #aaaaaa;
+ }
+#session_email:focus + i {
+	color: #da3c41;
+}
