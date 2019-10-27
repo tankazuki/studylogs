@@ -104,3 +104,20 @@
 #session_email:focus + i {
 	color: #da3c41;
 }
+
+/*認証ボタン系 */
+.fa-facebook-square{
+  color: #4267B2;
+}
+.fa-twitter-square{
+  color: #2CA7E0;
+}
+.facebook-auth, .twitter-auth, .github-auth{
+  margin: 10px;
+}
+.auth-button{
+  margin: 0 auto;
+  width: 300px;
+  height: 40px;
+  vertical-align: middle;
+}
