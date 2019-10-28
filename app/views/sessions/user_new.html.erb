@@ -1,17 +1,19 @@
 <div class="auth-layout">
   <div class="auth-wrapper-layout">
     <h2 class="auth-title">ログイン</h2>
-    <div class="facebook-auth">
-      <i class="fab fa-facebook-square fa-3x"></i>
-      <button class="auth-button facebook-auth-button">Facebookでログイン</button>
-    </div>
-    <div class="twitter-auth">
-      <i class="fab fa-twitter-square fa-3x"></i>
-      <button class="auth-button twitter-auth-button">Twitterでログイン</button>
-    </div>
-    <div class="github-auth">
-      <i class="fab fa-github-square fa-3x"></i>
-      <button class="auth-button twitter-auth-button">Githubでログイン</button>
+    <div class="external-auth">
+      <div class="facebook-auth">
+        <i class="fab fa-facebook-square fa-3x auth-logo"></i>
+        <button class="auth-button facebook-auth-button">Facebookでログイン</button>
+      </div>
+      <div class="twitter-auth">
+        <i class="fab fa-twitter-square fa-3x auth-logo"></i>
+        <button class="auth-button twitter-auth-button">Twitterでログイン</button>
+      </div>
+      <div class="github-auth">
+        <i class="fab fa-github-square fa-3x auth-logo"></i>
+        <button class="auth-button twitter-auth-button">Githubでログイン</button>
+      </div>
     </div>
     <h3 class="normal-auth">通常のログイン</h3>
     <%= form_for(:session, url:"sign_in", class: "auth-form") do |f| %>

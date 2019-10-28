@@ -106,6 +106,10 @@
 }
 
 /*認証ボタン系 */
+.external-auth{
+	width: 100%;
+	height: 40%;
+}
 .fa-facebook-square{
   color: #4267B2;
 }
@@ -113,11 +117,28 @@
   color: #2CA7E0;
 }
 .facebook-auth, .twitter-auth, .github-auth{
-  margin: 10px;
+	width: 95%;
+	margin: 2%;
+}
+.auth-logo{
+	line-height: 40px;
+	margin: 6px;
 }
 .auth-button{
-  margin: 0 auto;
+	display: inline-block;
   width: 300px;
-  height: 40px;
-  vertical-align: middle;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid black;
+	border-radius: 2px;
+	font-size: 18px;
+	text-decoration: none;
+	outline: none;
+	transition: .4s;
+}
+
+.auth-button:hover{
+  background: #67c5ff;
+	color: white;
+	border: 1px solid #67c5ff;
 }
