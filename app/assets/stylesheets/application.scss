@@ -33,17 +33,18 @@
   margin: 0 auto;
 }
 .auth-form{
-  display: inline-block;
+  display: block;
   margin: 0 auto;
 }
 
 .form-submit{
+  margin-top: 15px;
   display: inline-block;
   font-size: 18px;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #67c5ff;
-  border: solid 2px #67c5ff;
+  color: black;
+  border: solid 2px black;
   border-radius: 3px;
   transition: .4s;
 }
@@ -52,60 +53,28 @@
   color: white;
 }
 /*これはformあたりの部分 */
-#user_name, #user_email, #user_password, #session_password, #session_email {
-	position: relative;
-	width: 80%;
-	margin: 40px 3%;
-}
- #user_name, #user_email, #user_password, #session_password, #session_email {
+
+.auth-form-name, .auth-form-email, .auth-form-password {
 	font: 15px/24px sans-serif;
+  display: block;
 	box-sizing: border-box;
 	width: 60%;
-	margin: 20px 0;
+	margin: 0 auto;
 	padding: 0.3em;
 	transition: 0.3s;
-	border: 1px solid #1b2538;
+	border: 2px solid #1b2538;
 	border-radius: 4px;
 	outline: none;
-}
-#session_email:focus {
-	border-color: #da3c41;
-}
- #session_password:focus {
- 	border-color: #da3c41;
- }
- #user_name, #user_email, #user_password, #session_password, #session_email {
-	padding-left: 20px;
-}
-#session_email i {
-	position: absolute;
-	top: 8px;
-	left: 0;
-	padding: 9px 8px;
-	transition: 0.3s;
-	color: #aaaaaa;
-}
- #session_password i {
- 	position: absolute;
- 	top: 8px;
- 	left: 0;
- 	padding: 9px 8px;
- 	transition: 0.3s;
- 	color: #aaaaaa;
- }
- #session_password i {
- 	position: absolute;
- 	top: 8px;
- 	left: 0;
- 	padding: 9px 8px;
- 	transition: 0.3s;
- 	color: #aaaaaa;
- }
-#session_email:focus + i {
-	color: #da3c41;
+  padding-left: 20px;
 }
 
-/*認証ボタン系 */
+.form-label{
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+/*外部認証ボタン系 */
 .external-auth{
 	width: 100%;
 	height: 40%;
@@ -129,7 +98,7 @@
   width: 300px;
 	height: 40px;
 	line-height: 40px;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 2px;
 	font-size: 18px;
 	text-decoration: none;
@@ -140,5 +109,5 @@
 .auth-button:hover{
   background: #67c5ff;
 	color: white;
-	border: 1px solid #67c5ff;
+	border: 2px solid #67c5ff;
 }
