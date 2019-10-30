@@ -15,13 +15,18 @@
  */
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
-
+.auth-layout-background{
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
 .auth-layout{
   border: 1px gray solid;
   border-radius: 5px;
   width: 600px;
   height: 600px;
   margin: 0 auto;
+  background: white;
 }
 .auth-wrapper-layout{
   text-align: center;
@@ -30,7 +35,17 @@
   height: 100%;
 }
 .auth-title{
-  margin: 0 auto;
+  margin: 10px auto;
+}
+.label_form_wrapper{
+  width: 70%;
+  margin: 10px auto;
+  text-align: left;
+}
+.form-label{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
 }
 .auth-form{
   display: block;
@@ -58,7 +73,7 @@
 	font: 15px/24px sans-serif;
   display: block;
 	box-sizing: border-box;
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0.3em;
 	transition: 0.3s;
@@ -68,11 +83,6 @@
   padding-left: 20px;
 }
 
-.form-label{
-  margin-top: 10px;
-  display: inline-block;
-  font-size: 18px;
-}
 
 /*外部認証ボタン系 */
 .external-auth{
@@ -89,6 +99,19 @@
 	width: 95%;
 	margin: 2%;
 }
+.facebook-auth-button:hover{
+  color: white;
+  background: #4267B2
+}
+.twitter-auth-button:hover{
+  color: white;
+  background: #2CA7E0;
+}
+.github-auth-button:hover{
+  color: white;
+  background: black;
+}
+
 .auth-logo{
 	line-height: 40px;
 	margin: 6px;
@@ -104,10 +127,4 @@
 	text-decoration: none;
 	outline: none;
 	transition: .4s;
-}
-
-.auth-button:hover{
-  background: #67c5ff;
-	color: white;
-	border: 2px solid #67c5ff;
 }
