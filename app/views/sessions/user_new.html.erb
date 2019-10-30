@@ -1,8 +1,33 @@
-<h2>ログイン</h2>
-<%= form_for(:session, url:"sign_in") do |f| %>
-  <%= f.label :email, "email" %>
-  <%= f.email_field :email %>
-  <%= f.label :password, "password" %>
-  <%= f.password_field :password %>
-  <%= f.submit "送信" %>
-<% end %>
+<div class="auth-layout-background">
+  <div class="auth-layout">
+    <div class="auth-wrapper-layout">
+      <h2 class="auth-title">ログイン</h2>
+      <div class="external-auth">
+        <div class="facebook-auth">
+          <i class="fab fa-facebook-square fa-3x auth-logo"></i>
+          <button class="auth-button facebook-auth-button">Facebookでログイン</button>
+        </div>
+        <div class="twitter-auth">
+          <i class="fab fa-twitter-square fa-3x auth-logo"></i>
+          <button class="auth-button twitter-auth-button">Twitterでログイン</button>
+        </div>
+        <div class="github-auth">
+          <i class="fab fa-github-square fa-3x auth-logo"></i>
+          <button class="auth-button github-auth-button">Githubでログイン</button>
+        </div>
+      </div>
+      <h3 class="normal-auth">通常のログイン</h3>
+      <%= form_for(:session, url:"sign_in", class:"auth-form") do |f| %>
+        <div class="label_form_wrapper">
+          <%= f.label :email, "E-mail", class:"form-label" %>
+          <%= f.email_field :email, placeholder: "email", class: "auth-form-email" %>
+        </div>
+        <div class="label_form_wrapper">
+          <%= f.label :password, "パスワード", class:"form-label" %>
+          <%= f.password_field :password, placeholder: "password", class:"auth-form-password" %>
+        </div>
+        <%= f.submit "ログイン", class: "form-submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

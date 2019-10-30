@@ -1,10 +1,20 @@
-<h2>新規登録</h2>
-<%= form_for @user, url: {action: "create"} do |f| %>
-  <%= f.label :name, "name" %>
-  <%= f.text_field :name %>
-  <%= f.label :email, "email" %>
-  <%= f.email_field :email %>
-  <%= f.label :password, "password" %>
-  <%= f.password_field :password %>
-  <%= f.submit "送信" %>
-<% end %>
+<div class="auth-layout">
+  <div class="auth-wrapper-layout">
+    <h2 class="auth-title">新規登録</h2>
+    <%= form_for @user, url: {action: "create", class: "auth-form"}  do |f| %>
+      <div class="label_form_wrapper">
+        <%= f.label :name, "名前", class:"form-label" %>
+        <%= f.text_field :name, placeholder: "name", class: "auth-form-name" %>
+      </div>
+      <div class="label_form_wrapper">
+        <%= f.label :email, "E-mail", class:"form-label" %>
+        <%= f.email_field :email, placeholder: "email", class: "auth-form-email" %>
+      </div>
+      <div class="label_form_wrapper">
+        <%= f.label :password, "パスワード", class:"form-label" %>
+        <%= f.password_field :password, placeholder: "password", class: "auth-form-password" %>
+      </div>
+      <%= f.submit "新規登録", class:"form-submit" %>
+    <% end %>
+  </div>
+</div>

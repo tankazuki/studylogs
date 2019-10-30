@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
+.auth-layout-background{
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.auth-layout{
+  border: 1px gray solid;
+  border-radius: 5px;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  background: white;
+}
+.auth-wrapper-layout{
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.auth-title{
+  margin: 10px auto;
+}
+.label_form_wrapper{
+  width: 70%;
+  margin: 10px auto;
+  text-align: left;
+}
+.form-label{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+.auth-form{
+  display: block;
+  margin: 0 auto;
+}
+
+.form-submit{
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 18px;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid 2px black;
+  border-radius: 3px;
+  transition: .4s;
+}
+.form-submit:hover {
+  background: #67c5ff;
+  color: white;
+}
+/*これはformあたりの部分 */
+
+.auth-form-name, .auth-form-email, .auth-form-password {
+	font: 15px/24px sans-serif;
+  display: block;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0.3em;
+	transition: 0.3s;
+	border: 2px solid #1b2538;
+	border-radius: 4px;
+	outline: none;
+  padding-left: 20px;
+}
+
+
+/*外部認証ボタン系 */
+.external-auth{
+	width: 100%;
+	height: 40%;
+}
+.fa-facebook-square{
+  color: #4267B2;
+}
+.fa-twitter-square{
+  color: #2CA7E0;
+}
+.facebook-auth, .twitter-auth, .github-auth{
+	width: 95%;
+	margin: 2%;
+}
+.facebook-auth-button:hover{
+  color: white;
+  background: #4267B2
+}
+.twitter-auth-button:hover{
+  color: white;
+  background: #2CA7E0;
+}
+.github-auth-button:hover{
+  color: white;
+  background: black;
+}
+
+.auth-logo{
+	line-height: 40px;
+	margin: 6px;
+}
+.auth-button{
+	display: inline-block;
+  width: 300px;
+	height: 40px;
+	line-height: 40px;
+	border: 2px solid black;
+	border-radius: 2px;
+	font-size: 18px;
+	text-decoration: none;
+	outline: none;
+	transition: .4s;
+}
