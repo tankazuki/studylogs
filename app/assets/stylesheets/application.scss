@@ -128,3 +128,23 @@
 	outline: none;
 	transition: .4s;
 }
+
+/* header */
+.header, .footer{
+  width: 100%;
+  height: 100px;
+  background: #140335;
+}
+.header-logo, .footer-logo{
+  width: 100px;
+  height: 100px;
+}
+.logo{
+  width: 250px;
+  height: 100px;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+}
