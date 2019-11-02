@@ -1,0 +1,13 @@
+<%= render partial: "layouts/header" %>
+<div class="top">
+  <div class="top-layouts">
+    <div class="top-heading">
+      <p>STUDYLOGをはじめよう！</p>
+    </div>
+    <div class="auth-buttons">
+      <%= link_to "新規登録", user_new_url, class:"auth-button top-auth-button" %>
+      <%= link_to "ログイン", user_sign_in_url, class: "auth-button top-auth-button" %>
+    </div>
+  </div>
+</div>
+<%= render partial: "layouts/footer" %>
