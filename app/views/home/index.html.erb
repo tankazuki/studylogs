@@ -1,7 +1,4 @@
 <%= render partial: "layouts/header" %>
-  <% flash.each do |message_type, message| %>
-    <div class="alert alert-layout-<%= message_type %>"><p><%= message %></p></div>
-  <% end %>
   <% if sign_in_user? %>
     <h1><%= current_user.name %></h1>
     <%= link_to "ログアウト", user_sign_out_url %>
