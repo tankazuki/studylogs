@@ -150,3 +150,24 @@
   position: fixed;
   bottom: 0;
 }
+.alert{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+/* flashメッセージ系 */
+.alert-layout-success{
+  color: #048732;
+  border: 2px solid #048732;
+  background: #DDFFDD;
+}
+.alert-layout-danger{
+  color: #790E19;
+  border: 2px solid #790E19;
+  background: #F8D7D7;
+}
+
+ .alert > p {
+   text-align: center;
+ }

@@ -1,6 +1,6 @@
 <%= render partial: "layouts/header" %>
-  <% if flash[:notice] %>
-    <h3 style="color: red;"><%= flash[:notice] %></h3>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-layout-<%= message_type %>"><p><%= message %></p></div>
   <% end %>
   <% if sign_in_user? %>
     <h1><%= current_user.name %></h1>

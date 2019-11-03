@@ -9,9 +9,10 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       sign_in_user user
-      flash[:notice] = '新規登録が完了しました'
+      flash[:success] = '新規登録が完了しました'
       redirect_to root_path
     else
+      flash[:danger] = '新規登録に失敗しました'
       render 'new'
     end
   end
