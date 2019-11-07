@@ -6,9 +6,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      sign_in_user user
+    @user = User.new(user_params)
+    if @user.save
+      sign_in_user @user
       flash[:success] = '新規登録が完了しました'
       redirect_to root_path
     else

@@ -19,6 +19,9 @@
 body, p, a, h1, h2, h3, h4, div {
   font-family: "system-ui";
 }
+li {
+  list-style: none;
+}
 
 .auth-layout-background{
   width: 100%;
@@ -157,7 +160,6 @@ body, p, a, h1, h2, h3, h4, div {
 }
 .alert{
   width: 100%;
-  height: 60px;
   text-align: center;
   letter-spacing: 4px;
 }
