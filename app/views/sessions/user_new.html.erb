@@ -17,7 +17,7 @@
         </div>
       </div>
       <h3 class="normal-auth">通常のログイン</h3>
-      <%= form_for(:session, url:"sign_in", class:"auth-form") do |f| %>
+      <%= form_for(:session, url: user_session_create_path, class:"auth-form") do |f| %>
         <div class="label_form_wrapper">
           <%= f.label :email, "E-mail", class:"form-label" %>
           <%= f.email_field :email, placeholder: "email", class: "auth-form-email" %>
