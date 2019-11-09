@@ -1,7 +1,7 @@
 <div class="auth-layout">
   <div class="auth-wrapper-layout">
     <h2 class="auth-title">新規登録</h2>
-    <%= form_for @user, url: {action: "create", class: "auth-form"}  do |f| %>
+    <%= form_for @user, url: {action: "create"}, class: "auth-form"  do |f| %>
       <%= render "layouts/error_messages", model: f.object %>
       <div class="label_form_wrapper">
         <%= f.label :name, "名前", class:"form-label" %>
