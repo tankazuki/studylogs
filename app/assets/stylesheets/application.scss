@@ -159,9 +159,11 @@ li {
   bottom: 0;
 }
 .alert{
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
   text-align: center;
   letter-spacing: 4px;
+  margin-bottom: 10px;
 }
 /* flashメッセージ系 */
 .alert-layout-success{
