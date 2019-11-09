@@ -18,4 +18,18 @@ module SessionsHelper
     @current_user = nil
     redirect_to root_path
   end
+
+  def authenticate_user!
+    unless sign_in_user?
+      flash[:danger] = 'ログインしてください'
+      redirect_to root_path
+    end
+  end
+
+  def no_need_to_authenticate!
+    if sign_in_user?
+      flash[:danger] = 'ログイン時にこの操作はできません'
+      redirect_to user_index_url
+    end
+  end
 end

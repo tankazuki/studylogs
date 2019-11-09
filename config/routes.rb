@@ -8,6 +8,7 @@ get "/user/sign_out", to: "users#sign_out", as: "user_sign_out"
 
 post "users/sign_in", to: "sessions#user_create", as: "user_session_create"
 get "/users/sign_in", to: "sessions#user_new", as: "user_sign_in"
+get "/users/index", to: "home#index", as: "user_index"
 
 
 end

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
-
 class UsersController < ApplicationController
+  before_action :no_need_to_authenticate!, only:[:new, :create]
+  before_action :authenticate_user!, only:[:sign_out]
+
   def new
     @user = User.new
   end
@@ -10,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in_user @user
       flash[:success] = '新規登録が完了しました'
-      redirect_to root_path
+      redirect_to user_index_url
     else
       flash[:danger] = '新規登録に失敗しました'
       render 'new'
