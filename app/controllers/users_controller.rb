@@ -1,6 +1,8 @@
 # frozen_string_literal: true
-
 class UsersController < ApplicationController
+  before_action :no_need_to_authenticate!, only:[:new, :create]
+  before_action :authenticate_user!, only:[:sign_out]
+
   def new
     @user = User.new
   end

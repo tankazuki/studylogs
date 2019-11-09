@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   protect_from_forgery :except => [:session]
+  before_action :no_need_to_authenticate!, only:[:user_new, :user_create]
 
   def user_new
     @user = User.new
