@@ -22,6 +22,11 @@ body, p, a, h1, h2, h3, h4, div {
 li {
   list-style: none;
 }
+/* */
+input#session_email.auth-form-email, input#session_password.auth-form-password, input#user_name.auth-form-name, input#user_email.auth-form-email, input#user_password.auth-form-password {
+    font-family: "system-ui";
+  }
+
 
 .auth-layout-background{
   width: 100%;
