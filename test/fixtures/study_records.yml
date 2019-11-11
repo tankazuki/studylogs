@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  study_time: 2019-11-12 05:14:43
+  user: one
+  category: one
+  comment: MyText
+
+two:
+  title: MyString
+  study_time: 2019-11-12 05:14:43
+  user: two
+  category: two
+  comment: MyText
