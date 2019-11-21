@@ -1,3 +1,21 @@
 // Place all the styles related to the studyRecords controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.study-record{
+  width: 100%;
+  height: 100%;
+}
+.study-record-wrapper{
+  width: 80%;
+  height: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.study_record-title{
+  text-align: center;
+  background: white;
+}
+.study_record-title > p{
+  font-size: 32px;
+  letter-spacing: 3px;
+}
