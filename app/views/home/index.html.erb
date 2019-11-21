@@ -2,6 +2,11 @@
   <% if sign_in_user? %>
     <h1><%= current_user.name %></h1>
     <%= link_to "ログアウト", user_sign_out_url %>
-  <% else %>
+    <%= link_to "勉強記録を追加", new_study_record_url %>
+  <% end %>
+  <% if @study_records.present? %>
+    <% @study_records.each do |study_record| %>
+      <p><%= study_record %></p>
+    <% end %>
   <% end %>
 <%= render partial: "layouts/footer" %>

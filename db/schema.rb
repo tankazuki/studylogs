@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_19_060605) do
+ActiveRecord::Schema.define(version: 2019_11_11_201443) do
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_categories_on_user_id"
+  end
+
+  create_table "study_records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.time "study_time"
+    t.bigint "user_id"
+    t.bigint "category_id"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_study_records_on_category_id"
+    t.index ["user_id"], name: "index_study_records_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email"
@@ -20,4 +40,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_060605) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "categories", "users"
+  add_foreign_key "study_records", "categories"
+  add_foreign_key "study_records", "users"
 end
