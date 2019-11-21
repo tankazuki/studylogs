@@ -10,5 +10,6 @@ get "/users/sign_in", to: "sessions#user_new", as: "user_sign_in"
 post "/users/sign_in", to: "sessions#user_create", as: "user_session_create"
 get "/users/index", to: "home#index", as: "user_index"
 
+resources :study_records, only: [:new, :create]
 
 end
